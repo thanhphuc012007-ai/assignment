@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi tiết sản phẩm - PhoneStore</title>
+  <meta name="description" content="Thông số kỹ thuật, giá bán và đánh giá chi tiết sản phẩm tại PhoneStore.">
+  <!-- Bám theo giao diện sáng/tối của hệ điều hành, không lưu lại lựa chọn -->
+  <script>document.documentElement.setAttribute("data-theme",matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css"></head>
+<body data-page="product">
+
+  <div id="appHeader"></div>
+
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <div class="breadcrumb" id="breadcrumb"></div>
+        <h1 id="detailName">Chi tiết sản phẩm</h1>
+        <p id="detailBrandLine"></p>
+      </div>
+    </section>
+
+    <section class="section" style="padding:40px 0 60px">
+      <div class="container" id="detailRoot"></div>
+    </section>
+
+    <section class="section section-soft" id="relatedBlock" hidden>
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-eyebrow">Gợi ý cho bạn</span>
+            <h2>Sản phẩm cùng loại</h2>
+            <p>Những mẫu điện thoại khác có thể bạn cũng quan tâm</p>
+          </div>
+          <a class="section-link" href="products.html">Xem tất cả <span data-icon="arrowRight"></span></a>
+        </div>
+        <div class="grid grid-4" id="relatedGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="appFooter"></div>
+  <div class="toast-wrap" id="toastWrap" aria-live="polite" aria-atomic="false"></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/page-product.js"></script>
+</body>
+</html>

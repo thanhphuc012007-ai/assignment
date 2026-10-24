@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thanh toán - PhoneStore</title>
+  <meta name="description" content="Hoàn tất đặt hàng với các phương thức thanh toán COD, MoMo, ZaloPay và trả góp 0%.">
+  <!-- Bám theo giao diện sáng/tối của hệ điều hành, không lưu lại lựa chọn -->
+  <script>document.documentElement.setAttribute("data-theme",matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css"></head>
+<body data-page="checkout">
+
+  <div id="appHeader"></div>
+
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="index.html">Trang chủ</a><span>/</span>
+          <a href="cart.html">Giỏ hàng</a><span>/</span>
+          <span>Thanh toán</span>
+        </div>
+        <h1>Thanh toán đơn hàng</h1>
+        <p>Kiểm tra thông tin giao hàng và chọn phương thức thanh toán phù hợp.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding:36px 0 60px">
+      <div class="container">
+        <div id="checkoutRoot"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="appFooter"></div>
+  <div class="toast-wrap" id="toastWrap" aria-live="polite" aria-atomic="false"></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/page-checkout.js"></script>
+</body>
+</html>

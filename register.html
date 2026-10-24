@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng ký tài khoản - PhoneStore</title>
+  <meta name="description" content="Tạo tài khoản PhoneStore để lưu giỏ hàng, theo dõi đơn hàng và nhận ưu đãi riêng.">
+  <!-- Bám theo giao diện sáng/tối của hệ điều hành, không lưu lại lựa chọn -->
+  <script>document.documentElement.setAttribute("data-theme",matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css"></head>
+<body data-page="register">
+
+  <div id="appHeader"></div>
+
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="index.html">Trang chủ</a><span>/</span><a href="login.html">Tài khoản</a><span>/</span>
+          <span>Đăng ký</span>
+        </div>
+        <h1 id="authPageTitle">Tạo tài khoản mới</h1>
+        <p id="authPageSub">Điền thông tin bên dưới để bắt đầu mua sắm cùng PhoneStore.</p>
+      </div>
+    </section>
+
+    <section class="auth-main">
+      <div class="container">
+        <div class="auth-wrap">
+
+          <div class="panel">
+            <div id="authRoot" role="region" aria-labelledby="authPageTitle"></div>
+          </div>
+
+          <aside class="panel auth-side">
+            <h3>Tài khoản giúp bạn</h3>
+            <p>Bạn vẫn mua hàng không cần đăng nhập. Tài khoản chỉ làm thao tác nhanh hơn.</p>
+
+            <ul class="auth-perks">
+              <li class="auth-perk">
+                <span class="ico" data-icon="cart"></span>
+                <span>
+                  <strong>Giỏ hàng được ghi nhớ</strong>
+                  <span>Thêm sản phẩm xong đóng trình duyệt, quay lại vẫn còn nguyên.</span>
+                </span>
+              </li>
+              <li class="auth-perk">
+                <span class="ico" data-icon="truck"></span>
+                <span>
+                  <strong>Thanh toán nhanh</strong>
+                  <span>Thông tin người nhận được điền sẵn ở những lần đặt sau.</span>
+                </span>
+              </li>
+              <li class="auth-perk">
+                <span class="ico" data-icon="box"></span>
+                <span>
+                  <strong>Theo dõi đơn hàng</strong>
+                  <span>Lịch sử đơn của bạn được lưu lại để tra cứu bất cứ lúc nào.</span>
+                </span>
+              </li>
+              <li class="auth-perk">
+                <span class="ico" data-icon="shield"></span>
+                <span>
+                  <strong>Ưu đãi riêng</strong>
+                  <span>Nhận thông báo khuyến mãi và mã giảm giá sớm hơn.</span>
+                </span>
+              </li>
+            </ul>
+
+            <p class="auth-note">
+              Đồ án này không có máy chủ. Tài khoản chỉ được lưu trong trình duyệt
+              của bạn bằng localStorage, không gửi đi đâu cả.
+            </p>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="appFooter"></div>
+  <div class="toast-wrap" id="toastWrap" aria-live="polite" aria-atomic="false"></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/page-register.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Danh sách sản phẩm - PhoneStore</title>
+  <meta name="description" content="Danh sách điện thoại chính hãng Apple, Samsung, Xiaomi, OPPO, vivo, realme. Lọc theo hãng, giá và đặc điểm.">
+  <!-- Bám theo giao diện sáng/tối của hệ điều hành, không lưu lại lựa chọn -->
+  <script>document.documentElement.setAttribute("data-theme",matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css"></head>
+<body data-page="products">
+
+  <div id="appHeader"></div>
+
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="index.html">Trang chủ</a><span>/</span><span>Danh sách sản phẩm</span>
+        </div>
+        <h1 id="pageTitle">Tất cả sản phẩm</h1>
+        <p id="pageSub">Chính hãng 100%, bảo hành 12 tháng, trả góp 0% không cần thẻ tín dụng.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding:36px 0 60px">
+      <div class="container shop-layout">
+
+        <!-- ===== SIDEBAR ===== -->
+        <aside class="sidebar" id="sidebar">
+          <div class="sidebar-head">
+            <strong>Bộ lọc sản phẩm</strong>
+            <button class="icon-btn" id="closeSidebar" type="button" aria-label="Đóng bộ lọc"><span data-icon="close"></span></button>
+          </div>
+
+          <div class="side-block">
+            <div class="side-title">Danh mục</div>
+            <div class="side-list" id="sideCats"></div>
+          </div>
+
+          <div class="side-block">
+            <div class="side-title">Thương hiệu</div>
+            <div class="side-list side-scroll" id="sideBrands"></div>
+          </div>
+
+          <div class="side-block">
+            <div class="side-title">Khoảng giá</div>
+            <div class="side-list" id="sidePrices"></div>
+          </div>
+
+          <div class="side-block">
+            <div class="side-title">Đặc điểm</div>
+            <div id="sideFlags"></div>
+          </div>
+
+          <div class="side-block">
+            <button class="btn btn-outline btn-block btn-sm" id="resetAll" type="button">Xóa tất cả bộ lọc</button>
+          </div>
+
+          <div class="sidebar-foot">
+            <button class="btn btn-primary btn-block" id="applyFilter" type="button">Xem <span id="sidebarCount">0</span> sản phẩm</button>
+          </div>
+        </aside>
+
+        <!-- ===== DANH SÁCH ===== -->
+        <div>
+          <div class="shop-bar">
+            <div class="shop-bar-main">
+              <button class="btn btn-outline filter-toggle" id="filterToggle" type="button">
+                <span data-icon="filter"></span> Bộ lọc
+                <span class="filter-count" id="filterCount" hidden>0</span>
+              </button>
+              <div>
+                <span class="count">Tìm thấy <strong id="resultCount">0</strong> sản phẩm</span>
+                <div class="chips" id="activeChips"></div>
+              </div>
+            </div>
+            <div><select class="select" id="sortSelect" aria-label="Sắp xếp"></select></div>
+          </div>
+
+          <div class="grid" id="productGrid"></div>
+
+          <div class="load-more" id="loadMoreWrap">
+            <button class="btn btn-outline btn-lg" id="loadMore" type="button">Xem thêm</button>
+          </div>
+
+          <div class="empty-state" id="emptyState" hidden>
+            <div class="ico" data-icon="search"></div>
+            <h3>Không tìm thấy sản phẩm phù hợp</h3>
+            <p>Thử xóa bớt bộ lọc hoặc tìm kiếm với từ khóa khác.</p>
+            <button class="btn btn-primary" id="resetEmpty" type="button">Xóa tất cả bộ lọc</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <div id="appFooter"></div>
+  <div class="toast-wrap" id="toastWrap" aria-live="polite" aria-atomic="false"></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/page-products.js"></script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhoneStore - Điện thoại chính hãng, giá tốt</title>
+  <meta name="description" content="PhoneStore - cửa hàng điện thoại chính hãng. Giá tốt, bảo hành 12 tháng, giao hàng nhanh toàn quốc.">
+  <!-- Bám theo giao diện sáng/tối của hệ điều hành, không lưu lại lựa chọn -->
+  <script>document.documentElement.setAttribute("data-theme",matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css"></head>
+<body data-page="home">
+
+  <div id="appHeader"></div>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <span class="hero-eyebrow">🔥 Ưu đãi tới 30% cho mọi sản phẩm</span>
+          <h1>Điện thoại thế hệ mới<br><span>đã về kho</span></h1>
+          <p class="hero-desc"><span id="heroPhoneCount">22</span> mẫu smartphone hot nhất 2026 đến từ Apple, Samsung, Xiaomi, OPPO, vivo và realme. Giá ưu đãi, chính hãng, bảo hành uy tín.</p>
+          <div class="hero-btns">
+            <a href="products.html" class="btn btn-light btn-lg">Mua ngay</a>
+            <a href="#ban-chay" class="btn btn-ghost-light btn-lg">Sản phẩm bán chạy</a>
+          </div>
+          <div class="hero-stats" id="heroStats"></div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-glow"></div>
+          <div id="heroPhone"></div>
+          <div class="float-card float-a">
+            <span data-icon="tag"></span>
+            <div>Tiết kiệm tới<small>500.000₫ khi mua iPhone Pro</small></div>
+          </div>
+          <div class="float-card float-b">
+            <span data-icon="truck"></span>
+            <div>Giao hàng<small>2h nội thành, 24h toàn quốc</small></div>
+          </div>
+          <div class="float-card float-c">
+            <span data-icon="shield"></span>
+            <div>Bảo hành<small>Chính hãng 12 tháng</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ THƯƠNG HIỆU ============ -->
+    <section class="section" style="padding-bottom:0">
+      <div class="container">
+        <div class="section-head center">
+          <span class="section-eyebrow">Thương hiệu</span>
+          <h2>Chọn hãng bạn đang theo dõi</h2>
+          <p>Truy cập nhanh các dòng sản phẩm theo từng thương hiệu</p>
+        </div>
+        <div class="brand-bar" id="brandBar"></div>
+      </div>
+    </section>
+
+    <!-- ============ HOT ============ -->
+    <section class="section" id="ban-chay">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-eyebrow">🔥 Bán chạy nhất</span>
+            <h2>Sản phẩm được săn nhiều nhất</h2>
+            <p>Những mẫu điện thoại khách hàng quan tâm và đặt mua nhiều nhất tháng này</p>
+          </div>
+          <a class="section-link" href="products.html">Xem tất cả <span data-icon="arrowRight"></span></a>
+        </div>
+        <div class="grid grid-4" id="hotGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============ MỚI VỀ ============ -->
+    <section class="section section-soft" id="moi-ve">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-eyebrow">✨ Mới về</span>
+            <h2>Hàng mới về kho tháng này</h2>
+            <p>Cập nhật những mẫu mới nhất của các hãng, đều là hàng chính hãng</p>
+          </div>
+          <a class="section-link" href="products.html?sort=new">Xem tất cả <span data-icon="arrowRight"></span></a>
+        </div>
+        <div class="grid grid-4" id="newGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============ GIẢM GIÁ ============ -->
+    <section class="section" id="giam-gia">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-eyebrow">💰 Giảm giá sốc</span>
+            <h2>Đang giảm giá mạnh</h2>
+            <p>Tiết kiệm đến 2 triệu đồng cho những mẫu máy bán chạy</p>
+          </div>
+          <a class="section-link" href="products.html?sort=discount">Xem tất cả <span data-icon="arrowRight"></span></a>
+        </div>
+        <div class="grid grid-4" id="saleGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============ ƯU ĐÃI ============ -->
+    <section class="section section-soft" id="uu-dai">
+      <div class="container">
+        <div class="section-head center">
+          <span class="section-eyebrow">Ưu đãi đặc biệt</span>
+          <h2>Ưu đãi dành riêng cho bạn</h2>
+        </div>
+        <div class="promo-grid" id="promoGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============ TÍNH NĂNG ============ -->
+    <section class="section" style="padding-top:0">
+      <div class="container feature-row" id="featureRow"></div>
+    </section>
+
+    <!-- ============ NEWSLETTER ============ -->
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="newsletter">
+          <h2>Nhận ưu đãi mỗi tuần qua email</h2>
+          <p>Đăng ký để nhận thông tin sản phẩm mới, khuyến mãi và mã giảm giá sớm nhất.</p>
+          <form class="news-form" id="newsForm" novalidate>
+            <input type="email" id="newsEmail" placeholder="Nhập email của bạn" aria-label="Email">
+            <button type="submit" class="btn btn-light">Đăng ký ngay</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LIÊN HỆ ============ -->
+    <section class="section section-soft" id="lien-he">
+      <div class="container">
+        <div class="section-head center">
+          <span class="section-eyebrow">Liên hệ</span>
+          <h2>Cần tư vấn mua điện thoại?</h2>
+          <p>Để lại thông tin, đội ngũ tư vấn sẽ gọi cho bạn trong 30 phút</p>
+        </div>
+        <div class="contact-grid">
+          <form class="panel contact-form" id="contactForm" novalidate>
+            <div class="form-grid">
+              <div class="field">
+                <label for="cName">Họ và tên <span class="req">*</span></label>
+                <input type="text" id="cName" name="name" placeholder="Nguyễn Văn A">
+                <small class="err"></small>
+              </div>
+              <div class="field">
+                <label for="cPhone">Số điện thoại <span class="req">*</span></label>
+                <input type="tel" id="cPhone" name="phone" placeholder="0912 345 678">
+                <small class="err"></small>
+              </div>
+              <div class="field full">
+                <label for="cSubject">Chủ đề</label>
+                <select id="cSubject"></select>
+              </div>
+              <div class="field full">
+                <label for="cMsg">Nội dung <span class="req">*</span></label>
+                <textarea id="cMsg" name="message" rows="4" placeholder="Tôi muốn hỏi về..."></textarea>
+                <small class="err"></small>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" style="margin-top:8px">Gửi yêu cầu tư vấn</button>
+          </form>
+
+          <div class="panel info-card">
+            <h3>Thông tin liên hệ</h3>
+            <div id="contactInfo"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="appFooter"></div>
+  <div class="toast-wrap" id="toastWrap" aria-live="polite" aria-atomic="false"></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/page-home.js"></script>
+</body>
+</html>
